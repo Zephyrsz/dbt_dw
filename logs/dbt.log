@@ -1,0 +1,1209 @@
+[0m19:30:07.310952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119f0440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112daf750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112daf9d0>]}
+
+
+============================== 19:30:07.313699 | 89071193-6670-4eab-af83-39bb16e3a62d ==============================
+[0m19:30:07.313699 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:30:07.313971 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'introspect': 'True', 'debug': 'False', 'log_path': '/Users/rgwei/pj/pj_lk/dbt_dw/logs', 'partial_parse': 'True', 'warn_error': 'None', 'no_print': 'None', 'write_json': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt debug --profiles-dir .', 'empty': 'None', 'use_colors': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'quiet': 'False', 'static_parser': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m19:30:07.321898 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:30:07.322270 [info ] [MainThread]: python version: 3.13.9
+[0m19:30:07.322485 [info ] [MainThread]: python path: /Users/rgwei/pj/pj_lk/dbt_dw/.venv/bin/python
+[0m19:30:07.322636 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit-Mach-O
+[0m19:30:08.243750 [info ] [MainThread]: Using profiles dir at .
+[0m19:30:08.243981 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m19:30:08.244104 [info ] [MainThread]: Using dbt_project.yml file at /Users/rgwei/pj/pj_lk/dbt_dw/dbt_project.yml
+[0m19:30:08.245101 [info ] [MainThread]: adapter type: duckdb
+[0m19:30:08.245228 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:30:08.277605 [info ] [MainThread]: Configuration:
+[0m19:30:08.277888 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:30:08.278006 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:30:08.278107 [info ] [MainThread]: Required dependencies:
+[0m19:30:08.278276 [debug] [MainThread]: Executing "git --help"
+[0m19:30:08.297566 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:30:08.298104 [debug] [MainThread]: STDERR: "b''"
+[0m19:30:08.298265 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:30:08.298388 [info ] [MainThread]: Connection:
+[0m19:30:08.298500 [info ] [MainThread]:   database: warehouse
+[0m19:30:08.298584 [info ] [MainThread]:   schema: main
+[0m19:30:08.298664 [info ] [MainThread]:   path: warehouse.duckdb
+[0m19:30:08.298745 [info ] [MainThread]:   config_options: None
+[0m19:30:08.298822 [info ] [MainThread]:   extensions: None
+[0m19:30:08.298903 [info ] [MainThread]:   settings: {}
+[0m19:30:08.298979 [info ] [MainThread]:   external_root: .
+[0m19:30:08.299058 [info ] [MainThread]:   use_credential_provider: None
+[0m19:30:08.299135 [info ] [MainThread]:   attach: None
+[0m19:30:08.299208 [info ] [MainThread]:   filesystems: None
+[0m19:30:08.299282 [info ] [MainThread]:   remote: None
+[0m19:30:08.299355 [info ] [MainThread]:   plugins: None
+[0m19:30:08.299493 [info ] [MainThread]:   disable_transactions: False
+[0m19:30:08.299802 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:30:08.339336 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:30:08.357237 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:30:08.357397 [debug] [MainThread]: On debug: select 1 as id
+[0m19:30:08.357551 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:30:08.363954 [debug] [MainThread]: SQL status: OK in 0.006 seconds
+[0m19:30:08.364342 [debug] [MainThread]: On debug: Close
+[0m19:30:08.364497 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:30:08.364617 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:30:08.702475 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.4328432, "process_in_blocks": "0", "process_kernel_time": 0.179135, "process_mem_max_rss": "142753792", "process_out_blocks": "0", "process_user_time": 0.6537}
+[0m19:30:08.702850 [debug] [MainThread]: Command `dbt debug` succeeded at 19:30:08.702788 after 1.43 seconds
+[0m19:30:08.703012 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:30:08.703184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c350f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11396ae70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1138ccc00>]}
+[0m19:30:08.703429 [debug] [MainThread]: Flushing usage events
+[0m19:30:09.938831 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:34:27.910411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104900440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105783750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057839d0>]}
+
+
+============================== 15:34:27.912781 | c982a5f5-6c74-4191-ac5b-ccbb873f5ac1 ==============================
+[0m15:34:27.912781 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:34:27.913039 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': '.', 'version_check': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'target_path': 'None', 'fail_fast': 'False', 'debug': 'False', 'printer_width': '80', 'log_format': 'default', 'write_json': 'True', 'static_parser': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'log_path': '/Users/rgwei/pj/pj_lk/dbt_dw/logs', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt build --profiles-dir .'}
+[0m15:34:28.035630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ac8640>]}
+[0m15:34:28.052519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10580abe0>]}
+[0m15:34:28.053528 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:34:28.094510 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:34:28.094836 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:34:28.094980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105807450>]}
+[0m15:34:28.495357 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.local_warehouse.intermediate
+[0m15:34:28.498138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c83110>]}
+[0m15:34:28.524155 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m15:34:28.525182 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m15:34:28.540604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ffdef0>]}
+[0m15:34:28.540793 [info ] [MainThread]: Found 2 models, 3 data tests, 1 source, 474 macros
+[0m15:34:28.541467 [info ] [MainThread]: 
+[0m15:34:28.541597 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:34:28.541694 [info ] [MainThread]: 
+[0m15:34:28.541861 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:34:28.543285 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m15:34:28.571664 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m15:34:28.571854 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m15:34:28.571968 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:34:28.582013 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m15:34:28.582524 [debug] [ThreadPool]: On list_warehouse: Close
+[0m15:34:28.582817 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_main)
+[0m15:34:28.583027 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "main"
+"
+[0m15:34:28.585113 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m15:34:28.585238 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m15:34:28.585326 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:34:28.585829 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:34:28.586244 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m15:34:28.586341 [debug] [ThreadPool]: On create_warehouse_main: BEGIN
+[0m15:34:28.586486 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:34:28.586569 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m15:34:28.586651 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+    
+        create schema if not exists "warehouse"."main"
+    
+[0m15:34:28.586847 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:34:28.587135 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m15:34:28.587241 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m15:34:28.587322 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m15:34:28.587457 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:34:28.587552 [debug] [ThreadPool]: On create_warehouse_main: Close
+[0m15:34:28.587904 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_warehouse_main, now list_warehouse_main)
+[0m15:34:28.589697 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m15:34:28.589807 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m15:34:28.589888 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:34:28.590051 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:34:28.590370 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m15:34:28.590472 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m15:34:28.592668 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:34:28.593165 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m15:34:28.593833 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_main'
+[0m15:34:28.593930 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m15:34:28.594121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106393110>]}
+[0m15:34:28.594285 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:34:28.594370 [debug] [MainThread]: On master: BEGIN
+[0m15:34:28.594446 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:34:28.594595 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:34:28.594675 [debug] [MainThread]: On master: COMMIT
+[0m15:34:28.594749 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:34:28.594823 [debug] [MainThread]: On master: COMMIT
+[0m15:34:28.594944 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:34:28.595025 [debug] [MainThread]: On master: Close
+[0m15:34:28.596239 [debug] [Thread-1 (]: Began running node model.local_warehouse.stg_raw__project_user_counts
+[0m15:34:28.596411 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_raw__project_user_counts .................. [RUN]
+[0m15:34:28.596577 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_warehouse_main, now model.local_warehouse.stg_raw__project_user_counts)
+[0m15:34:28.596682 [debug] [Thread-1 (]: Began compiling node model.local_warehouse.stg_raw__project_user_counts
+[0m15:34:28.598754 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.599085 [debug] [Thread-1 (]: Began executing node model.local_warehouse.stg_raw__project_user_counts
+[0m15:34:28.608415 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.608975 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.609122 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: BEGIN
+[0m15:34:28.609235 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:34:28.609476 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.609575 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.609676 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+  
+  create view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('./data/project_user_counts.csv')
+),
+renamed as (
+    select
+        cast(project_id as integer) as project_id,
+        cast(user_count as integer) as user_count
+    from source
+)
+select * from renamed
+  );
+
+[0m15:34:28.614977 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m15:34:28.617083 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.617224 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+alter view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" rename to "stg_raw__project_user_counts"
+[0m15:34:28.617777 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.620955 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m15:34:28.621087 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.621188 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m15:34:28.622126 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:34:28.623725 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m15:34:28.623850 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+      drop view if exists "warehouse"."main"."stg_raw__project_user_counts__dbt_backup" cascade
+    
+[0m15:34:28.624220 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.624998 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: Close
+[0m15:34:28.625721 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10617d6d0>]}
+[0m15:34:28.625933 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_raw__project_user_counts ............. [[32mOK[0m in 0.03s]
+[0m15:34:28.626130 [debug] [Thread-1 (]: Finished running node model.local_warehouse.stg_raw__project_user_counts
+[0m15:34:28.626431 [debug] [Thread-2 (]: Began running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m15:34:28.626581 [info ] [Thread-2 (]: 2 of 5 START test not_null_stg_raw__project_user_counts_project_id ............. [RUN]
+[0m15:34:28.626745 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m15:34:28.626849 [debug] [Thread-2 (]: Began compiling node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m15:34:28.630173 [debug] [Thread-2 (]: Writing injected SQL for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m15:34:28.630606 [debug] [Thread-2 (]: Began executing node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m15:34:28.635981 [debug] [Thread-2 (]: Writing runtime sql for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m15:34:28.636295 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m15:34:28.636407 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: BEGIN
+[0m15:34:28.636501 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:34:28.636697 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.636797 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m15:34:28.636890 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."stg_raw__project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:34:28.640623 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m15:34:28.641787 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: ROLLBACK
+[0m15:34:28.642028 [debug] [Thread-2 (]: Failed to rollback 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m15:34:28.642150 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: Close
+[0m15:34:28.642359 [info ] [Thread-2 (]: 2 of 5 PASS not_null_stg_raw__project_user_counts_project_id ................... [[32mPASS[0m in 0.02s]
+[0m15:34:28.642607 [debug] [Thread-2 (]: Finished running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m15:34:28.642853 [debug] [Thread-3 (]: Began running node model.local_warehouse.fct_project_user_counts
+[0m15:34:28.643066 [info ] [Thread-3 (]: 3 of 5 START sql table model main.fct_project_user_counts ...................... [RUN]
+[0m15:34:28.643245 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.local_warehouse.fct_project_user_counts'
+[0m15:34:28.643398 [debug] [Thread-3 (]: Began compiling node model.local_warehouse.fct_project_user_counts
+[0m15:34:28.644240 [debug] [Thread-3 (]: Writing injected SQL for node "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.644522 [debug] [Thread-3 (]: Began executing node model.local_warehouse.fct_project_user_counts
+[0m15:34:28.651034 [debug] [Thread-3 (]: Writing runtime sql for node "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.651551 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.651690 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: BEGIN
+[0m15:34:28.651803 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:34:28.652049 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.652159 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.652257 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."main"."fct_project_user_counts__dbt_tmp"
+  
+    as (
+      with stg as (
+    select * from "warehouse"."main"."stg_raw__project_user_counts"
+)
+select
+    project_id,
+    user_count,
+    now() as _loaded_at
+from stg
+    );
+  
+  
+[0m15:34:28.656622 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m15:34:28.657829 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.657991 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+alter table "warehouse"."main"."fct_project_user_counts__dbt_tmp" rename to "fct_project_user_counts"
+[0m15:34:28.658663 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m15:34:28.660266 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m15:34:28.660381 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.660477 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m15:34:28.660926 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.661732 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m15:34:28.661856 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+      drop table if exists "warehouse"."main"."fct_project_user_counts__dbt_backup" cascade
+    
+[0m15:34:28.662053 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.662458 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: Close
+[0m15:34:28.662647 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c982a5f5-6c74-4191-ac5b-ccbb873f5ac1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065c4260>]}
+[0m15:34:28.662848 [info ] [Thread-3 (]: 3 of 5 OK created sql table model main.fct_project_user_counts ................. [[32mOK[0m in 0.02s]
+[0m15:34:28.663016 [debug] [Thread-3 (]: Finished running node model.local_warehouse.fct_project_user_counts
+[0m15:34:28.663260 [debug] [Thread-4 (]: Began running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m15:34:28.663383 [debug] [Thread-1 (]: Began running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m15:34:28.663507 [info ] [Thread-4 (]: 4 of 5 START test not_null_fct_project_user_counts_project_id .................. [RUN]
+[0m15:34:28.663666 [info ] [Thread-1 (]: 5 of 5 START test unique_fct_project_user_counts_project_id .................... [RUN]
+[0m15:34:28.663856 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m15:34:28.664002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.local_warehouse.stg_raw__project_user_counts, now test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271)
+[0m15:34:28.664132 [debug] [Thread-4 (]: Began compiling node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m15:34:28.664251 [debug] [Thread-1 (]: Began compiling node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m15:34:28.665406 [debug] [Thread-4 (]: Writing injected SQL for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m15:34:28.667369 [debug] [Thread-1 (]: Writing injected SQL for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m15:34:28.667665 [debug] [Thread-1 (]: Began executing node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m15:34:28.668353 [debug] [Thread-1 (]: Writing runtime sql for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m15:34:28.668483 [debug] [Thread-4 (]: Began executing node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m15:34:28.669075 [debug] [Thread-4 (]: Writing runtime sql for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m15:34:28.669248 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m15:34:28.669376 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: BEGIN
+[0m15:34:28.669480 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:34:28.669684 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m15:34:28.669797 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: BEGIN
+[0m15:34:28.669900 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.669998 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:34:28.670104 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m15:34:28.670252 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    project_id as unique_field,
+    count(*) as n_records
+
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is not null
+group by project_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:34:28.670421 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.670523 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m15:34:28.670619 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:34:28.671014 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:34:28.671681 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: ROLLBACK
+[0m15:34:28.671935 [debug] [Thread-4 (]: Failed to rollback 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m15:34:28.672050 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: Close
+[0m15:34:28.672258 [info ] [Thread-4 (]: 4 of 5 PASS not_null_fct_project_user_counts_project_id ........................ [[32mPASS[0m in 0.01s]
+[0m15:34:28.672443 [debug] [Thread-4 (]: Finished running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m15:34:28.672548 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:34:28.673017 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: ROLLBACK
+[0m15:34:28.673200 [debug] [Thread-1 (]: Failed to rollback 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271'
+[0m15:34:28.673301 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: Close
+[0m15:34:28.673452 [info ] [Thread-1 (]: 5 of 5 PASS unique_fct_project_user_counts_project_id .......................... [[32mPASS[0m in 0.01s]
+[0m15:34:28.673608 [debug] [Thread-1 (]: Finished running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m15:34:28.674064 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:34:28.674175 [debug] [MainThread]: On master: BEGIN
+[0m15:34:28.674308 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:34:28.674485 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:34:28.674570 [debug] [MainThread]: On master: COMMIT
+[0m15:34:28.674654 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:34:28.674732 [debug] [MainThread]: On master: COMMIT
+[0m15:34:28.674855 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:34:28.674934 [debug] [MainThread]: On master: Close
+[0m15:34:28.675077 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:34:28.675188 [debug] [MainThread]: Connection 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271' was properly closed.
+[0m15:34:28.675271 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50' was properly closed.
+[0m15:34:28.675350 [debug] [MainThread]: Connection 'model.local_warehouse.fct_project_user_counts' was properly closed.
+[0m15:34:28.675427 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4' was properly closed.
+[0m15:34:28.675528 [info ] [MainThread]: 
+[0m15:34:28.675648 [info ] [MainThread]: Finished running 1 table model, 3 data tests, 1 view model in 0 hours 0 minutes and 0.13 seconds (0.13s).
+[0m15:34:28.676021 [debug] [MainThread]: Command end result
+[0m15:34:28.684012 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m15:34:28.684691 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m15:34:28.686968 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rgwei/pj/pj_lk/dbt_dw/target/run_results.json
+[0m15:34:28.687118 [info ] [MainThread]: 
+[0m15:34:28.687261 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:34:28.687366 [info ] [MainThread]: 
+[0m15:34:28.687472 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m15:34:28.695892 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.81255525, "process_in_blocks": "0", "process_kernel_time": 0.198251, "process_mem_max_rss": "168804352", "process_out_blocks": "0", "process_user_time": 1.040856}
+[0m15:34:28.696089 [debug] [MainThread]: Command `dbt build` succeeded at 15:34:28.696059 after 0.81 seconds
+[0m15:34:28.696222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065a6210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063e3770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060a3650>]}
+[0m15:34:28.696353 [debug] [MainThread]: Flushing usage events
+[0m15:34:30.919487 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:59:57.232893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10732c440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fb7750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fb79d0>]}
+
+
+============================== 17:59:57.235601 | 2eed4315-0421-4099-9a85-5169dcdae9c5 ==============================
+[0m17:59:57.235601 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:59:57.235852 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'empty': 'False', 'warn_error': 'None', 'profiles_dir': '/Users/rgwei/pj/pj_lk/dbt_dw', 'write_json': 'True', 'printer_width': '80', 'debug': 'False', 'log_format': 'default', 'target_path': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/rgwei/pj/pj_lk/dbt_dw/logs', 'log_cache_events': 'False', 'fail_fast': 'False', 'introspect': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'quiet': 'False', 'use_colors': 'True', 'no_print': 'None', 'invocation_command': 'dbt build'}
+[0m17:59:57.371468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074fc640>]}
+[0m17:59:57.388436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10903ebe0>]}
+[0m17:59:57.389438 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:59:57.430218 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:59:57.479327 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:59:57.479502 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:59:57.479599 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:59:57.481476 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.local_warehouse.intermediate
+[0m17:59:57.493854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096fa950>]}
+[0m17:59:57.519089 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m17:59:57.520217 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m17:59:57.535570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093089b0>]}
+[0m17:59:57.535771 [info ] [MainThread]: Found 2 models, 3 data tests, 1 source, 474 macros
+[0m17:59:57.536525 [info ] [MainThread]: 
+[0m17:59:57.536656 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:59:57.536747 [info ] [MainThread]: 
+[0m17:59:57.536919 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:59:57.538457 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m17:59:57.569203 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m17:59:57.569398 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m17:59:57.569511 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:59:57.582959 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m17:59:57.583704 [debug] [ThreadPool]: On list_warehouse: Close
+[0m17:59:57.583963 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_main)
+[0m17:59:57.584122 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "main"
+"
+[0m17:59:57.586190 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m17:59:57.586295 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m17:59:57.586380 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:59:57.586843 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:59:57.587296 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m17:59:57.587401 [debug] [ThreadPool]: On create_warehouse_main: BEGIN
+[0m17:59:57.587564 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:59:57.587649 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m17:59:57.587732 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+    
+        create schema if not exists "warehouse"."main"
+    
+[0m17:59:57.588064 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:59:57.588303 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m17:59:57.588399 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m17:59:57.588478 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m17:59:57.588603 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:59:57.588687 [debug] [ThreadPool]: On create_warehouse_main: Close
+[0m17:59:57.589077 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_warehouse_main, now list_warehouse_main)
+[0m17:59:57.590679 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m17:59:57.590788 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m17:59:57.590868 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:59:57.591027 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:59:57.591331 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m17:59:57.591424 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m17:59:57.593363 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:59:57.593971 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m17:59:57.594627 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_main'
+[0m17:59:57.594730 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m17:59:57.595010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10995f150>]}
+[0m17:59:57.595158 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:59:57.595246 [debug] [MainThread]: On master: BEGIN
+[0m17:59:57.595333 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:59:57.595500 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:59:57.595587 [debug] [MainThread]: On master: COMMIT
+[0m17:59:57.595669 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:59:57.595743 [debug] [MainThread]: On master: COMMIT
+[0m17:59:57.595868 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:59:57.595946 [debug] [MainThread]: On master: Close
+[0m17:59:57.597245 [debug] [Thread-1 (]: Began running node model.local_warehouse.stg_raw__project_user_counts
+[0m17:59:57.597423 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_raw__project_user_counts .................. [RUN]
+[0m17:59:57.597569 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_warehouse_main, now model.local_warehouse.stg_raw__project_user_counts)
+[0m17:59:57.597677 [debug] [Thread-1 (]: Began compiling node model.local_warehouse.stg_raw__project_user_counts
+[0m17:59:57.599763 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.600000 [debug] [Thread-1 (]: Began executing node model.local_warehouse.stg_raw__project_user_counts
+[0m17:59:57.610899 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.611245 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.611356 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: BEGIN
+[0m17:59:57.611477 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:59:57.611710 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.611804 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.611901 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+  
+  create view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('./data/project_user_counts.csv')
+),
+renamed as (
+    select
+        cast(project_id as integer) as project_id,
+        cast(user_count as integer) as user_count
+    from source
+)
+select * from renamed
+  );
+
+[0m17:59:57.617407 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m17:59:57.619638 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.619778 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+alter view "warehouse"."main"."stg_raw__project_user_counts" rename to "stg_raw__project_user_counts__dbt_backup"
+[0m17:59:57.620356 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.645748 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.645928 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+alter view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" rename to "stg_raw__project_user_counts"
+[0m17:59:57.646217 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.650212 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m17:59:57.650385 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.650501 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m17:59:57.651151 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:59:57.652786 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m17:59:57.652916 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+      drop view if exists "warehouse"."main"."stg_raw__project_user_counts__dbt_backup" cascade
+    
+[0m17:59:57.653202 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.654072 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: Close
+[0m17:59:57.654808 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ea9090>]}
+[0m17:59:57.655017 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_raw__project_user_counts ............. [[32mOK[0m in 0.06s]
+[0m17:59:57.655196 [debug] [Thread-1 (]: Finished running node model.local_warehouse.stg_raw__project_user_counts
+[0m17:59:57.655515 [debug] [Thread-2 (]: Began running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m17:59:57.655671 [info ] [Thread-2 (]: 2 of 5 START test not_null_stg_raw__project_user_counts_project_id ............. [RUN]
+[0m17:59:57.655865 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m17:59:57.656008 [debug] [Thread-2 (]: Began compiling node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m17:59:57.659361 [debug] [Thread-2 (]: Writing injected SQL for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m17:59:57.659793 [debug] [Thread-2 (]: Began executing node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m17:59:57.666255 [debug] [Thread-2 (]: Writing runtime sql for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m17:59:57.666665 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m17:59:57.666787 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: BEGIN
+[0m17:59:57.666890 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:59:57.667139 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.667241 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m17:59:57.667344 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."stg_raw__project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:59:57.670076 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m17:59:57.671467 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: ROLLBACK
+[0m17:59:57.671711 [debug] [Thread-2 (]: Failed to rollback 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m17:59:57.671830 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: Close
+[0m17:59:57.672040 [info ] [Thread-2 (]: 2 of 5 PASS not_null_stg_raw__project_user_counts_project_id ................... [[32mPASS[0m in 0.02s]
+[0m17:59:57.672217 [debug] [Thread-2 (]: Finished running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m17:59:57.672486 [debug] [Thread-3 (]: Began running node model.local_warehouse.fct_project_user_counts
+[0m17:59:57.672730 [info ] [Thread-3 (]: 3 of 5 START sql table model main.fct_project_user_counts ...................... [RUN]
+[0m17:59:57.672950 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.local_warehouse.fct_project_user_counts'
+[0m17:59:57.673059 [debug] [Thread-3 (]: Began compiling node model.local_warehouse.fct_project_user_counts
+[0m17:59:57.673984 [debug] [Thread-3 (]: Writing injected SQL for node "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.674324 [debug] [Thread-3 (]: Began executing node model.local_warehouse.fct_project_user_counts
+[0m17:59:57.681005 [debug] [Thread-3 (]: Writing runtime sql for node "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.681400 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.681600 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: BEGIN
+[0m17:59:57.681920 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:59:57.682279 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.682413 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.682526 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."main"."fct_project_user_counts__dbt_tmp"
+  
+    as (
+      with stg as (
+    select * from "warehouse"."main"."stg_raw__project_user_counts"
+)
+select
+    project_id,
+    user_count,
+    now() as _loaded_at
+from stg
+    );
+  
+  
+[0m17:59:57.685735 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m17:59:57.687647 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.687783 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_project_user_counts'
+  
+[0m17:59:57.688139 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.688536 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.688644 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_project_user_counts'
+  
+[0m17:59:57.688951 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.690217 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.690356 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+alter table "warehouse"."main"."fct_project_user_counts" rename to "fct_project_user_counts__dbt_backup"
+[0m17:59:57.690799 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.691794 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.691908 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+alter table "warehouse"."main"."fct_project_user_counts__dbt_tmp" rename to "fct_project_user_counts"
+[0m17:59:57.692123 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.693757 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m17:59:57.693869 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.693968 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m17:59:57.694264 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.695012 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m17:59:57.695142 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+      drop table if exists "warehouse"."main"."fct_project_user_counts__dbt_backup" cascade
+    
+[0m17:59:57.695460 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.695934 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: Close
+[0m17:59:57.696142 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2eed4315-0421-4099-9a85-5169dcdae9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098ebe90>]}
+[0m17:59:57.696358 [info ] [Thread-3 (]: 3 of 5 OK created sql table model main.fct_project_user_counts ................. [[32mOK[0m in 0.02s]
+[0m17:59:57.696534 [debug] [Thread-3 (]: Finished running node model.local_warehouse.fct_project_user_counts
+[0m17:59:57.696815 [debug] [Thread-4 (]: Began running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m17:59:57.696978 [debug] [Thread-1 (]: Began running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m17:59:57.697105 [info ] [Thread-4 (]: 4 of 5 START test not_null_fct_project_user_counts_project_id .................. [RUN]
+[0m17:59:57.697264 [info ] [Thread-1 (]: 5 of 5 START test unique_fct_project_user_counts_project_id .................... [RUN]
+[0m17:59:57.697497 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m17:59:57.697641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.local_warehouse.stg_raw__project_user_counts, now test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271)
+[0m17:59:57.697774 [debug] [Thread-4 (]: Began compiling node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m17:59:57.698036 [debug] [Thread-1 (]: Began compiling node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m17:59:57.699350 [debug] [Thread-4 (]: Writing injected SQL for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m17:59:57.701263 [debug] [Thread-1 (]: Writing injected SQL for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m17:59:57.701699 [debug] [Thread-4 (]: Began executing node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m17:59:57.701822 [debug] [Thread-1 (]: Began executing node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m17:59:57.702442 [debug] [Thread-4 (]: Writing runtime sql for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m17:59:57.703160 [debug] [Thread-1 (]: Writing runtime sql for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m17:59:57.703429 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m17:59:57.703550 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: BEGIN
+[0m17:59:57.703678 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:59:57.703808 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m17:59:57.704013 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: BEGIN
+[0m17:59:57.704114 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:59:57.704266 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:59:57.704371 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m17:59:57.704471 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:59:57.704574 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:59:57.704684 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m17:59:57.704853 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    project_id as unique_field,
+    count(*) as n_records
+
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is not null
+group by project_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:59:57.705376 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:59:57.705944 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: ROLLBACK
+[0m17:59:57.706198 [debug] [Thread-4 (]: Failed to rollback 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m17:59:57.706311 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: Close
+[0m17:59:57.706533 [info ] [Thread-4 (]: 4 of 5 PASS not_null_fct_project_user_counts_project_id ........................ [[32mPASS[0m in 0.01s]
+[0m17:59:57.706671 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:59:57.706850 [debug] [Thread-4 (]: Finished running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m17:59:57.707336 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: ROLLBACK
+[0m17:59:57.707519 [debug] [Thread-1 (]: Failed to rollback 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271'
+[0m17:59:57.707617 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: Close
+[0m17:59:57.707768 [info ] [Thread-1 (]: 5 of 5 PASS unique_fct_project_user_counts_project_id .......................... [[32mPASS[0m in 0.01s]
+[0m17:59:57.707931 [debug] [Thread-1 (]: Finished running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m17:59:57.708402 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:59:57.708506 [debug] [MainThread]: On master: BEGIN
+[0m17:59:57.708726 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:59:57.708964 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:59:57.709070 [debug] [MainThread]: On master: COMMIT
+[0m17:59:57.709159 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:59:57.709256 [debug] [MainThread]: On master: COMMIT
+[0m17:59:57.709395 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:59:57.709474 [debug] [MainThread]: On master: Close
+[0m17:59:57.709588 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:59:57.709676 [debug] [MainThread]: Connection 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271' was properly closed.
+[0m17:59:57.709749 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50' was properly closed.
+[0m17:59:57.709819 [debug] [MainThread]: Connection 'model.local_warehouse.fct_project_user_counts' was properly closed.
+[0m17:59:57.709888 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4' was properly closed.
+[0m17:59:57.709987 [info ] [MainThread]: 
+[0m17:59:57.710093 [info ] [MainThread]: Finished running 1 table model, 3 data tests, 1 view model in 0 hours 0 minutes and 0.17 seconds (0.17s).
+[0m17:59:57.710418 [debug] [MainThread]: Command end result
+[0m17:59:57.716752 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m17:59:57.717805 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m17:59:57.719670 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rgwei/pj/pj_lk/dbt_dw/target/run_results.json
+[0m17:59:57.719776 [info ] [MainThread]: 
+[0m17:59:57.719904 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:59:57.720003 [info ] [MainThread]: 
+[0m17:59:57.720111 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m17:59:57.725321 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.5215426, "process_in_blocks": "0", "process_kernel_time": 0.186236, "process_mem_max_rss": "162742272", "process_out_blocks": "0", "process_user_time": 0.741123}
+[0m17:59:57.725491 [debug] [MainThread]: Command `dbt build` succeeded at 17:59:57.725464 after 0.52 seconds
+[0m17:59:57.725616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d01a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109dc0a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093ad8b0>]}
+[0m17:59:57.725736 [debug] [MainThread]: Flushing usage events
+[0m17:59:59.300809 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:00:52.632935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108000440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e8b750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e8b9d0>]}
+
+
+============================== 18:00:52.635904 | c84ca348-eae2-433d-8465-01cc83c05d3c ==============================
+[0m18:00:52.635904 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:00:52.636384 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'introspect': 'True', 'invocation_command': 'dbt build', 'cache_selected_only': 'False', 'no_print': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'debug': 'False', 'log_path': '/Users/rgwei/pj/pj_lk/dbt_dw/logs', 'version_check': 'True', 'target_path': 'None', 'warn_error': 'None', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/rgwei/pj/pj_lk/dbt_dw', 'use_experimental_parser': 'False', 'empty': 'False', 'static_parser': 'True'}
+[0m18:00:52.771158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081d0640>]}
+[0m18:00:52.788395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f12be0>]}
+[0m18:00:52.789383 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:00:52.823186 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m18:00:52.870531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:00:52.870690 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:00:52.870779 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:00:52.872564 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.local_warehouse.intermediate
+[0m18:00:52.884747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109dfa950>]}
+[0m18:00:52.910516 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m18:00:52.911553 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m18:00:52.924724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b089b0>]}
+[0m18:00:52.924931 [info ] [MainThread]: Found 2 models, 3 data tests, 1 source, 474 macros
+[0m18:00:52.925647 [info ] [MainThread]: 
+[0m18:00:52.925763 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:00:52.925847 [info ] [MainThread]: 
+[0m18:00:52.926008 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:00:52.927670 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m18:00:52.949042 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m18:00:52.949214 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m18:00:52.949309 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:00:52.962221 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m18:00:52.962730 [debug] [ThreadPool]: On list_warehouse: Close
+[0m18:00:52.962960 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_main)
+[0m18:00:52.963093 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "main"
+"
+[0m18:00:52.965000 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m18:00:52.965115 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m18:00:52.965203 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:00:52.965658 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:00:52.966044 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m18:00:52.966128 [debug] [ThreadPool]: On create_warehouse_main: BEGIN
+[0m18:00:52.966258 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:00:52.966333 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m18:00:52.966409 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+    
+        create schema if not exists "warehouse"."main"
+    
+[0m18:00:52.966731 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:00:52.966963 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m18:00:52.967051 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m18:00:52.967125 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m18:00:52.967242 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:00:52.967319 [debug] [ThreadPool]: On create_warehouse_main: Close
+[0m18:00:52.967734 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_warehouse_main, now list_warehouse_main)
+[0m18:00:52.969406 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m18:00:52.969505 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m18:00:52.969582 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:00:52.969731 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:00:52.970066 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m18:00:52.970167 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:00:52.972386 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:00:52.972974 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m18:00:52.973599 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_main'
+[0m18:00:52.973696 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m18:00:52.973980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a058670>]}
+[0m18:00:52.974115 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:00:52.974192 [debug] [MainThread]: On master: BEGIN
+[0m18:00:52.974260 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:00:52.974393 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:00:52.974465 [debug] [MainThread]: On master: COMMIT
+[0m18:00:52.974532 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:00:52.974598 [debug] [MainThread]: On master: COMMIT
+[0m18:00:52.974708 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:00:52.974781 [debug] [MainThread]: On master: Close
+[0m18:00:52.975712 [debug] [Thread-1 (]: Began running node model.local_warehouse.stg_raw__project_user_counts
+[0m18:00:52.975857 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_raw__project_user_counts .................. [RUN]
+[0m18:00:52.975993 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_warehouse_main, now model.local_warehouse.stg_raw__project_user_counts)
+[0m18:00:52.976090 [debug] [Thread-1 (]: Began compiling node model.local_warehouse.stg_raw__project_user_counts
+[0m18:00:52.978178 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:52.978392 [debug] [Thread-1 (]: Began executing node model.local_warehouse.stg_raw__project_user_counts
+[0m18:00:52.988939 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:52.989299 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:52.989471 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: BEGIN
+[0m18:00:52.989595 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:00:52.989899 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:00:52.990006 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:52.990112 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+  
+  create view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('./data/project_user_counts.csv')
+),
+renamed as (
+    select
+        cast(project_id as integer) as project_id,
+        cast(user_count as integer) as user_count
+    from source
+)
+select * from renamed
+  );
+
+[0m18:00:52.994409 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:00:52.996361 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:52.996492 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+alter view "warehouse"."main"."stg_raw__project_user_counts" rename to "stg_raw__project_user_counts__dbt_backup"
+[0m18:00:52.997121 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:00:53.018365 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:53.018520 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+alter view "warehouse"."main"."stg_raw__project_user_counts__dbt_tmp" rename to "stg_raw__project_user_counts"
+[0m18:00:53.018795 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.022222 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m18:00:53.022343 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:53.022437 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: COMMIT
+[0m18:00:53.022883 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.024537 [debug] [Thread-1 (]: Using duckdb connection "model.local_warehouse.stg_raw__project_user_counts"
+[0m18:00:53.024654 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.stg_raw__project_user_counts"} */
+
+      drop view if exists "warehouse"."main"."stg_raw__project_user_counts__dbt_backup" cascade
+    
+[0m18:00:53.025102 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.025937 [debug] [Thread-1 (]: On model.local_warehouse.stg_raw__project_user_counts: Close
+[0m18:00:53.026642 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a59cfc0>]}
+[0m18:00:53.026844 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_raw__project_user_counts ............. [[32mOK[0m in 0.05s]
+[0m18:00:53.027029 [debug] [Thread-1 (]: Finished running node model.local_warehouse.stg_raw__project_user_counts
+[0m18:00:53.027288 [debug] [Thread-2 (]: Began running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m18:00:53.027449 [info ] [Thread-2 (]: 2 of 5 START test not_null_stg_raw__project_user_counts_project_id ............. [RUN]
+[0m18:00:53.027653 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m18:00:53.027772 [debug] [Thread-2 (]: Began compiling node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m18:00:53.030864 [debug] [Thread-2 (]: Writing injected SQL for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m18:00:53.031080 [debug] [Thread-2 (]: Began executing node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m18:00:53.036809 [debug] [Thread-2 (]: Writing runtime sql for node "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m18:00:53.037139 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m18:00:53.037249 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: BEGIN
+[0m18:00:53.037341 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:00:53.037575 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.037680 [debug] [Thread-2 (]: Using duckdb connection "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"
+[0m18:00:53.037775 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."stg_raw__project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:00:53.040882 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m18:00:53.041981 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: ROLLBACK
+[0m18:00:53.042220 [debug] [Thread-2 (]: Failed to rollback 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50'
+[0m18:00:53.042319 [debug] [Thread-2 (]: On test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50: Close
+[0m18:00:53.042497 [info ] [Thread-2 (]: 2 of 5 PASS not_null_stg_raw__project_user_counts_project_id ................... [[32mPASS[0m in 0.01s]
+[0m18:00:53.042665 [debug] [Thread-2 (]: Finished running node test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50
+[0m18:00:53.042928 [debug] [Thread-3 (]: Began running node model.local_warehouse.fct_project_user_counts
+[0m18:00:53.043150 [info ] [Thread-3 (]: 3 of 5 START sql table model main.fct_project_user_counts ...................... [RUN]
+[0m18:00:53.043349 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.local_warehouse.fct_project_user_counts'
+[0m18:00:53.043462 [debug] [Thread-3 (]: Began compiling node model.local_warehouse.fct_project_user_counts
+[0m18:00:53.044191 [debug] [Thread-3 (]: Writing injected SQL for node "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.044383 [debug] [Thread-3 (]: Began executing node model.local_warehouse.fct_project_user_counts
+[0m18:00:53.049892 [debug] [Thread-3 (]: Writing runtime sql for node "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.050128 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.050231 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: BEGIN
+[0m18:00:53.050332 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:00:53.050533 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.050619 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.050706 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."main"."fct_project_user_counts__dbt_tmp"
+  
+    as (
+      with stg as (
+    select * from "warehouse"."main"."stg_raw__project_user_counts"
+)
+select
+    project_id,
+    user_count,
+    now() as _loaded_at
+from stg
+    );
+  
+  
+[0m18:00:53.053807 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m18:00:53.055551 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.055676 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_project_user_counts'
+  
+[0m18:00:53.055975 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.056345 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.056445 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_project_user_counts'
+  
+[0m18:00:53.056714 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.057627 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.057729 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+alter table "warehouse"."main"."fct_project_user_counts" rename to "fct_project_user_counts__dbt_backup"
+[0m18:00:53.058092 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.059034 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.059150 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+alter table "warehouse"."main"."fct_project_user_counts__dbt_tmp" rename to "fct_project_user_counts"
+[0m18:00:53.059374 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.060985 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m18:00:53.061100 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.061189 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: COMMIT
+[0m18:00:53.061494 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.062152 [debug] [Thread-3 (]: Using duckdb connection "model.local_warehouse.fct_project_user_counts"
+[0m18:00:53.062267 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "model.local_warehouse.fct_project_user_counts"} */
+
+      drop table if exists "warehouse"."main"."fct_project_user_counts__dbt_backup" cascade
+    
+[0m18:00:53.062529 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.062932 [debug] [Thread-3 (]: On model.local_warehouse.fct_project_user_counts: Close
+[0m18:00:53.063111 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c84ca348-eae2-433d-8465-01cc83c05d3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fefe90>]}
+[0m18:00:53.063310 [info ] [Thread-3 (]: 3 of 5 OK created sql table model main.fct_project_user_counts ................. [[32mOK[0m in 0.02s]
+[0m18:00:53.063486 [debug] [Thread-3 (]: Finished running node model.local_warehouse.fct_project_user_counts
+[0m18:00:53.063758 [debug] [Thread-4 (]: Began running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m18:00:53.063886 [debug] [Thread-1 (]: Began running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m18:00:53.063988 [info ] [Thread-4 (]: 4 of 5 START test not_null_fct_project_user_counts_project_id .................. [RUN]
+[0m18:00:53.064142 [info ] [Thread-1 (]: 5 of 5 START test unique_fct_project_user_counts_project_id .................... [RUN]
+[0m18:00:53.064297 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m18:00:53.064405 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.local_warehouse.stg_raw__project_user_counts, now test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271)
+[0m18:00:53.064503 [debug] [Thread-4 (]: Began compiling node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m18:00:53.064594 [debug] [Thread-1 (]: Began compiling node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m18:00:53.065705 [debug] [Thread-4 (]: Writing injected SQL for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m18:00:53.067499 [debug] [Thread-1 (]: Writing injected SQL for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m18:00:53.067784 [debug] [Thread-1 (]: Began executing node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m18:00:53.068407 [debug] [Thread-1 (]: Writing runtime sql for node "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m18:00:53.068528 [debug] [Thread-4 (]: Began executing node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m18:00:53.069222 [debug] [Thread-4 (]: Writing runtime sql for node "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m18:00:53.069392 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m18:00:53.069490 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: BEGIN
+[0m18:00:53.069578 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:00:53.069764 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m18:00:53.069877 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: BEGIN
+[0m18:00:53.069996 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:00:53.070141 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:00:53.070293 [debug] [Thread-1 (]: Using duckdb connection "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"
+[0m18:00:53.070392 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    project_id as unique_field,
+    count(*) as n_records
+
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is not null
+group by project_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:00:53.070540 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m18:00:53.070635 [debug] [Thread-4 (]: Using duckdb connection "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"
+[0m18:00:53.070724 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "local_warehouse", "target_name": "dev", "node_id": "test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select project_id
+from "warehouse"."main"."fct_project_user_counts"
+where project_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:00:53.071136 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m18:00:53.071636 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: ROLLBACK
+[0m18:00:53.071881 [debug] [Thread-4 (]: Failed to rollback 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4'
+[0m18:00:53.071987 [debug] [Thread-4 (]: On test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4: Close
+[0m18:00:53.072162 [info ] [Thread-4 (]: 4 of 5 PASS not_null_fct_project_user_counts_project_id ........................ [[32mPASS[0m in 0.01s]
+[0m18:00:53.072334 [debug] [Thread-4 (]: Finished running node test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4
+[0m18:00:53.072478 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:00:53.072853 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: ROLLBACK
+[0m18:00:53.073011 [debug] [Thread-1 (]: Failed to rollback 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271'
+[0m18:00:53.073099 [debug] [Thread-1 (]: On test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271: Close
+[0m18:00:53.073237 [info ] [Thread-1 (]: 5 of 5 PASS unique_fct_project_user_counts_project_id .......................... [[32mPASS[0m in 0.01s]
+[0m18:00:53.073389 [debug] [Thread-1 (]: Finished running node test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271
+[0m18:00:53.073820 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:00:53.073922 [debug] [MainThread]: On master: BEGIN
+[0m18:00:53.073995 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:00:53.074129 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:00:53.074202 [debug] [MainThread]: On master: COMMIT
+[0m18:00:53.074274 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:00:53.074340 [debug] [MainThread]: On master: COMMIT
+[0m18:00:53.074465 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:00:53.074552 [debug] [MainThread]: On master: Close
+[0m18:00:53.074646 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:00:53.074718 [debug] [MainThread]: Connection 'test.local_warehouse.unique_fct_project_user_counts_project_id.e132f89271' was properly closed.
+[0m18:00:53.074784 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_stg_raw__project_user_counts_project_id.8039928a50' was properly closed.
+[0m18:00:53.074847 [debug] [MainThread]: Connection 'model.local_warehouse.fct_project_user_counts' was properly closed.
+[0m18:00:53.074911 [debug] [MainThread]: Connection 'test.local_warehouse.not_null_fct_project_user_counts_project_id.be41a64df4' was properly closed.
+[0m18:00:53.074993 [info ] [MainThread]: 
+[0m18:00:53.075088 [info ] [MainThread]: Finished running 1 table model, 3 data tests, 1 view model in 0 hours 0 minutes and 0.15 seconds (0.15s).
+[0m18:00:53.075399 [debug] [MainThread]: Command end result
+[0m18:00:53.081819 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/manifest.json
+[0m18:00:53.082455 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rgwei/pj/pj_lk/dbt_dw/target/semantic_manifest.json
+[0m18:00:53.084408 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rgwei/pj/pj_lk/dbt_dw/target/run_results.json
+[0m18:00:53.084524 [info ] [MainThread]: 
+[0m18:00:53.084653 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:00:53.084745 [info ] [MainThread]: 
+[0m18:00:53.084845 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m18:00:53.088698 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.49270672, "process_in_blocks": "0", "process_kernel_time": 0.166512, "process_mem_max_rss": "166117376", "process_out_blocks": "0", "process_user_time": 0.726327}
+[0m18:00:53.088861 [debug] [MainThread]: Command `dbt build` succeeded at 18:00:53.088834 after 0.49 seconds
+[0m18:00:53.088991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a3fd9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c236b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c22850>]}
+[0m18:00:53.089108 [debug] [MainThread]: Flushing usage events
+[0m18:00:54.319055 [debug] [MainThread]: An error was encountered while trying to flush usage events

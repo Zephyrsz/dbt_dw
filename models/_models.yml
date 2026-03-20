@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_raw__project_user_counts
+    description: "Staging model for raw project user counts data"
+    columns:
+      - name: project_id
+        description: "Unique identifier for the project"
+        tests:
+          - not_null
+      - name: user_count
+        description: "Number of users associated with the project"
+
+  - name: fct_project_user_counts
+    description: "Fact table containing project user counts"
+    columns:
+      - name: project_id
+        description: "Unique identifier for the project"
+        tests:
+          - unique
+          - not_null
+      - name: user_count
+        description: "Number of users associated with the project"
+      - name: _loaded_at
+        description: "Timestamp when the data was loaded"
